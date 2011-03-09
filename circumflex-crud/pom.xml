@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>circumflex-crud-parent</artifactId>
+        <groupId>ru.qrilka.circumflex.crud</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>circumflex-crud</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>ru.circumflex</groupId>
+            <artifactId>circumflex-core</artifactId>
+            <version>${cx.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>ru.circumflex</groupId>
+          <artifactId>circumflex-ftl</artifactId>
+          <version>${cx.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>ru.circumflex</groupId>
+          <artifactId>circumflex-orm</artifactId>
+          <version>${cx.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.scala-tools</groupId>
+                <artifactId>maven-scala-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>

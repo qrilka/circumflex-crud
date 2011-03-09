@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ru.qrilka.circumflex.crud</groupId>
+    <artifactId>circumflex-crud-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <cx.version>2.0</cx.version>
+        <scala.version>2.8.1</scala.version>
+    </properties>
+
+    <modules>
+        <module>circumflex-crud</module>
+        <module>circumflex-crud-example</module>
+    </modules>
+
+      <build>
+          <pluginManagement>
+              <plugins>
+                  <plugin>
+                      <groupId>org.scala-tools</groupId>
+                      <artifactId>maven-scala-plugin</artifactId>
+                      <version>2.15.0</version>
+                      <executions>
+                          <execution>
+                              <id>scala-compile</id>
+                              <phase>compile</phase>
+                              <goals>
+                                  <goal>compile</goal>
+                              </goals>
+                              <configuration>
+                                  <args>
+                                      <arg>-deprecation</arg>
+                                  </args>
+                              </configuration>
+                          </execution>
+                          <execution>
+                              <id>scala-test-compile</id>
+                              <phase>test-compile</phase>
+                              <goals>
+                                  <goal>testCompile</goal>
+                              </goals>
+                          </execution>
+                      </executions>
+                      <configuration>
+                          <scalaVersion>${scala.version}</scalaVersion>
+                          <useFsc>true</useFsc>
+                      </configuration>
+                  </plugin>
+              </plugins>
+          </pluginManagement>
+      </build>
+</project>
