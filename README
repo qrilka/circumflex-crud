@@ -1,1 +1,2 @@
-This file was created by IntelliJ IDEA 10.0.2 for binding GitHub repository
+An attempt to create basic CRUD functionality for Circumflex applications.
+Example application uses Postgresql (database: crud_example, user: example, password: example). The schema could be installed with mvn cx:schema it the app folder.
